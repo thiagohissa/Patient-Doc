@@ -18,6 +18,7 @@
         _age = age;
         _healthCard = HC;
         _PREVIOUSLY_ACCEPTED = NO;
+        _collectionOfPrescriptionsPATIENT = [NSMutableArray array];
     }
     return self;
 }
@@ -48,7 +49,7 @@
 
 -(void)requestMedication:(Doctor*)doctor{
     if(self.PREVIOUSLY_ACCEPTED){
-        
+        [doctor getPrescriptions:self];
     }
     else{
         NSLog(@"You must visit the doctor first(Not previously accepted)");
@@ -56,6 +57,13 @@
 }
 
 
+
+-(void)savePatientPrescriptions:(Patient*)patient andPrescription:(NSString*)string{
+    
+    [patient.collectionOfPrescriptionsPATIENT addObject:string];
+ //   NSLog(@"Patient Prescription: %@", patient.collectionOfPrescriptionsPATIENT);
+    
+}
 
 
 
