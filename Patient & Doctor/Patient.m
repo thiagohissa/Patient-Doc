@@ -21,4 +21,32 @@
     return self;
 }
 
+
+
+-(void)getDoctorInfo:(Doctor*)doctor {
+    
+    NSLog(@"Doctor Name: %@ ",doctor.name);
+    NSLog(@"Doctor Specialization: %@",doctor.specialization);
+    
+}
+
+
+
+-(void)visitDoctor:(Doctor*)doctor{
+    
+    if(self.healthCard){
+        [doctor acceptPatient:self];
+    }
+    else{
+        NSLog(@"Doctor cannot accept %@ because he/she does not have a health card", self.name);
+    }
+    
+}
+
+
+
+
+
+
+
 @end

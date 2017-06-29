@@ -7,10 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Doctor.h"
+
+@class Doctor;
 
 @interface Patient : NSObject
 @property (nonatomic) NSString* name;
 @property (nonatomic) NSInteger age;
 @property (nonatomic) BOOL healthCard;
 - (instancetype)initWithName:(NSString*)name andSpec:(NSInteger)age andHealthCard:(BOOL)HC;
+
+-(void)getDoctorInfo:(Doctor*)doctor;
+
+-(void)visitDoctor:(Doctor *)doctor;
+
 @end

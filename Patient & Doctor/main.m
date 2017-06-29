@@ -14,8 +14,9 @@ int main(int argc, const char * argv[]) {
 
     
     Doctor *doctor = [[Doctor alloc] initWithName:@"Doctor" andSpec:@"Plastic"];
-    Patient *patient = [[Patient alloc] initWithName:@"Patient1" andSpec:@22 andHealthCard:YES];
+    Patient *patient = [[Patient alloc] initWithName:@"Patient1" andSpec:22 andHealthCard:YES];
     
+    [patient visitDoctor:doctor];
     
     
     

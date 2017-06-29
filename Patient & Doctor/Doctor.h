@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Patient.h"
+
+@class Patient;
 
 @interface Doctor : NSObject
 @property (nonatomic) NSString* name;
 @property (nonatomic) NSString* specialization;
 - (instancetype)initWithName:(NSString*)name andSpec:(NSString*)spec;
+-(void)acceptPatient:(Patient*)patient;
 @end

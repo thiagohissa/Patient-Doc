@@ -7,6 +7,7 @@
 //
 
 #import "Doctor.h"
+#import "Patient.h"
 
 @implementation Doctor
 
@@ -19,6 +20,14 @@
     }
     return self;
 }
+
+
+-(void)acceptPatient:(Patient*)patient{
+    
+}
+
+
+
 
 
 @end
