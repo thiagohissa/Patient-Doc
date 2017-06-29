@@ -17,12 +17,28 @@
     if (self) {
         _name = name;
         _specialization = spec;
+        _acceptedPatients = [NSMutableArray array];
     }
     return self;
 }
 
 
 -(void)acceptPatient:(Patient*)patient{
+    
+    [_acceptedPatients addObject:patient.name];
+    
+   // NSLog(@"Patient: %@",self.acceptedPatients);
+}
+
+
+
+-(Patient*)getPrescriptions:(Patient*)patient{
+    
+    char input[255];
+    NSLog(@"Enter patient disease: (cancer or headache) \n");
+    fgets(input, 255, stdin);
+    
+    
     
 }
 

@@ -17,6 +17,7 @@
         _name = name;
         _age = age;
         _healthCard = HC;
+        _PREVIOUSLY_ACCEPTED = NO;
     }
     return self;
 }
@@ -35,12 +36,23 @@
 -(void)visitDoctor:(Doctor*)doctor{
     
     if(self.healthCard){
+        self.PREVIOUSLY_ACCEPTED = YES;
         [doctor acceptPatient:self];
     }
     else{
         NSLog(@"Doctor cannot accept %@ because he/she does not have a health card", self.name);
     }
     
+}
+
+
+-(void)requestMedication:(Doctor*)doctor{
+    if(self.PREVIOUSLY_ACCEPTED){
+        
+    }
+    else{
+        NSLog(@"You must visit the doctor first(Not previously accepted)");
+    }
 }
 
 

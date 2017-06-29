@@ -14,6 +14,8 @@
 @interface Doctor : NSObject
 @property (nonatomic) NSString* name;
 @property (nonatomic) NSString* specialization;
+@property (nonatomic) NSMutableArray* acceptedPatients;
 - (instancetype)initWithName:(NSString*)name andSpec:(NSString*)spec;
 -(void)acceptPatient:(Patient*)patient;
+-(Patient*)getPrescriptions:(Patient*)patient;
 @end
