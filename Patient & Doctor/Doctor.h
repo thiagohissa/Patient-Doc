@@ -11,11 +11,15 @@
 
 @class Patient;
 
+
+
+
+
 @interface Doctor : NSObject
 @property (nonatomic) NSString* name;
 @property (nonatomic) NSString* specialization;
 @property (nonatomic) NSMutableArray* acceptedPatients;
-@property (nonatomic) NSMutableArray* collectionOfPrescriptions;
+
 - (instancetype)initWithName:(NSString*)name andSpec:(NSString*)spec;
 -(void)acceptPatient:(Patient*)patient;
 -(void)getPrescriptions:(Patient*)patient;

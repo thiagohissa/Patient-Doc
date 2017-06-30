@@ -11,11 +11,13 @@
 
 @class Doctor;
 
+
+
 @interface Patient : NSObject
 @property (nonatomic) NSString* name;
 @property (nonatomic) NSInteger age;
 @property (nonatomic) BOOL healthCard;
-@property (nonatomic) NSMutableArray* collectionOfPrescriptionsPATIENT;
+
 @property (nonatomic) BOOL PREVIOUSLY_ACCEPTED;
 
 - (instancetype)initWithName:(NSString*)name andSpec:(NSInteger)age andHealthCard:(BOOL)HC;
@@ -23,7 +25,6 @@
 -(void)getDoctorInfo:(Doctor*)doctor;
 
 -(void)visitDoctor:(Doctor *)doctor;
-
 -(void)requestMedication:(Doctor*)doctor;
 
 -(void)savePatientPrescriptions:(Patient*)patient andPrescription:(NSString*)string;

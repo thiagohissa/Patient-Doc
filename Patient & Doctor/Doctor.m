@@ -9,6 +9,15 @@
 #import "Doctor.h"
 #import "Patient.h"
 
+@interface Doctor ()
+@property (nonatomic) NSMutableArray* collectionOfPrescriptions;
+@end
+
+
+
+
+
+
 @implementation Doctor
 
 - (instancetype)initWithName:(NSString*)name andSpec:(NSString*)spec

@@ -8,6 +8,14 @@
 
 #import "Patient.h"
 
+
+
+@interface Patient ()
+@property (nonatomic) NSMutableArray* collectionOfPrescriptionsPATIENT;
+@end
+
+
+
 @implementation Patient
 
 - (instancetype)initWithName:(NSString*)name andSpec:(NSInteger)age andHealthCard:(BOOL)HC
@@ -61,7 +69,7 @@
 -(void)savePatientPrescriptions:(Patient*)patient andPrescription:(NSString*)string{
     
     [patient.collectionOfPrescriptionsPATIENT addObject:string];
- //   NSLog(@"Patient Prescription: %@", patient.collectionOfPrescriptionsPATIENT);
+  //  NSLog(@"Patient Prescription: %@", patient.collectionOfPrescriptionsPATIENT);
     
 }
 
